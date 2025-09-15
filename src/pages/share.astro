@@ -52,6 +52,97 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </div>
 </section>
+<section class="container mx-auto px-4 py-8 max-w-lg">
+  <h2 class="text-xl font-bold mb-6">Submit your instant:</h2>
+
+  <form id="instantForm" class="flex flex-col gap-6">
+    <!-- Full name -->
+    <div class="flex flex-col gap-2">
+      <label for="name" class="font-medium">Full name:</label>
+      <input type="text" id="name" name="name" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col gap-2">
+      <label for="email" class="font-medium">E-mail:</label>
+      <input type="email" id="email" name="email" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+    </div>
+
+    <!-- Title -->
+    <div class="flex flex-col gap-2">
+      <label for="title" class="font-medium">Submission title:</label>
+      <input type="text" id="title" name="title" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+    </div>
+
+    <!-- Upload -->
+    <div class="flex flex-col gap-2">
+      <label class="font-medium">Photo upload:</label>
+      <div class="border-2 border-dashed rounded flex flex-col items-center justify-center p-8 text-center text-sm cursor-pointer hover:bg-gray-50">
+        <img src="/src/assets/images/upload.svg" alt="upload icon" class="w-8 h-8 mb-2">
+        <p>Drag and drop<br> a photo or <span class="text-blue-600 underline">browse</span></p>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="flex flex-col gap-2">
+      <label for="description" class="font-medium">Submission description/story:</label>
+      <textarea id="description" name="description" rows="3" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+    </div>
+
+    <!-- Terms -->
+    <div class="flex flex-col gap-2">
+      <label class="font-medium">Terms & conditions:</label>
+      <div class="border rounded p-4 h-48 overflow-y-auto text-sm">
+        <p><strong>By participating in the contest, you accept...</strong></p>
+      </div>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="flex items-center gap-2">
+      <input type="checkbox" id="agree" name="agree" class="w-4 h-4">
+      <label for="agree" class="text-sm">I have read and agree to the terms and conditions</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">Submit</button>
+  </form>
+
+  <!-- Toast -->
+  <div id="toast"
+       class="hidden fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded shadow-lg max-w-sm text-sm opacity-0 transform translate-y-4 transition-all duration-500 ease-in-out">
+    <p class="font-semibold">You’re an instant champ! Thanks for the contribution:-)</p>
+    <p class="mt-2">The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.</p>
+    <p class="mt-2">If you’re one of the lucky winners or nominees, we will contact you by e-mail. Good luck!</p>
+    <p class="mt-2 font-medium">NB! Want to make one more submission? Start the submission form over:-)</p>
+  </div>
+</section>
+
+<script>
+ const form = document.getElementById("instantForm") as HTMLFormElement;
+
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Reset form
+    form.reset();
+
+    // Show toast
+    toast.classList.remove("hidden");
+    setTimeout(() => {
+      toast.classList.remove("opacity-0", "translate-y-4");
+      toast.classList.add("opacity-100", "translate-y-0");
+    }, 50);
+
+    // Hide toast after 6s
+    setTimeout(() => {
+      toast.classList.remove("opacity-100", "translate-y-0");
+      toast.classList.add("opacity-0", "translate-y-4");
+      setTimeout(() => toast.classList.add("hidden"), 500);
+    }, 6000);
+  });
+</script>
 
 
 </MainLayout>
