@@ -11,8 +11,8 @@
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Daily slab';
+  src: url('/fonts/ABCDailySlab-Regular-Trial.otf') format('opentype');
 }
 
 @font-face {
@@ -32,7 +32,7 @@
   --color-secondary-600: #F57A00;
 
   /*Typografi */
-  --font-display: 'Roboto', sans-serif;
+  --font-display: 'Daily slab', sans-serif;
   --font-sans: 'Roboto', sans-serif;
   --font-serif: 'Domine', serif;
 }
