@@ -6,8 +6,8 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -32,8 +32,8 @@
   --color-secondary-600: #F57A00;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
+  --font-display: 'Roboto', sans-serif;
+  --font-sans: 'Roboto', sans-serif;
   --font-serif: 'Domine', serif;
 }
 
