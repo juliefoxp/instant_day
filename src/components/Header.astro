@@ -10,9 +10,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-4">
                 <li class=""><a href="/" class={currentPath === "" ? "font-bold" : ""}>forside</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-                <li class=""><a href="/lyt/" class={currentPath === "lyt/" ? "font-bold" : ""}>lyt</a></li>
-                <li class=""><a href="/live/" class={currentPath === "live/" ? "font-bold" : ""}>live</a></li>
-                <li class=""><a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}>om</a></li>
+                <li class=""><a href="/info/" class={currentPath === "lyt/" ? "font-bold" : ""}>info</a></li>
+                <li class=""><a href="/share/" class={currentPath === "live/" ? "font-bold" : ""}>share</a></li>
+                <li class=""><a href="/winners/" class={currentPath === "om/" ? "font-bold" : ""}>winners</a></li>
 
             </ul>
         </nav>
