@@ -2,97 +2,112 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 <MainLayout>
-<section class="container mx-auto px-4 py-8">
-  <h1 class="text-xl font-bold mb-2">SHARE YOUR INSTANTS</h1>
-  <h2 class="text-base mb-8">Ready to share your instants? How to participate</h2>
-
-  <div class="flex flex-col gap-8">
-    <!-- Step 1 -->
-    <div class="flex flex-col gap-2">
-      <h3 class="font-semibold">1. TAKE A PHOTO</h3>
-      <div class="flex items-center gap-4">
-        <img src="/src/assets/images/camera.svg" alt="camera tegning" class="w-15 h-15 shrink-0">
-        <p class="text-sm">
-          Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2 - 10 MB, in jpg/jpeg or webp format.
-        </p>
-      </div>
+<section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+  <!-- Kolonne 1: Header -->
+  <div class="hidden md:flex md:col-span-1 justify-center">
+    <!-- Lodret tekst/navigation placeholder -->
+    <div class="rotate-[-90deg] origin-bottom whitespace-nowrap font-bold tracking-widest">
+      INFO
     </div>
+  </div>
 
-    <!-- Step 2 -->
-    <div class="flex flex-col gap-2 ">
-      <h3 class="font-semibold">2. FILL OUT THE FORM</h3>
-      <div class="flex items-center gap-4">
-        <img src="/src/assets/images/upload.svg" alt="upload tegning" class="w-15 h-15 shrink-0">
-        <p class="text-sm">
-          Upload your photo and credentials in the form.
-        </p>
+  <!-- Kolonne 2–6: Steps -->
+  <div class="md:col-span-5">
+    <h1 class="text-2xl font-bold mb-2">Share your instants</h1>
+    <h2 class="text-base mb-8">Ready to share your instants? How to participate</h2>
+
+    <div class="flex flex-col gap-8">
+      <!-- Step 1 -->
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold">1. TAKE A PHOTO</h3>
+        <div class="flex items-center gap-4">
+          <img src="/src/assets/images/camera.svg" alt="camera tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30">
+          <p class="text-sm">
+            Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2 - 10 MB, in jpg/jpeg or webp format.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- Step 3 -->
-    <div class="flex flex-col gap-2">
-      <h3 class="font-semibold">3. AGREE TO OUR TERMS</h3>
-      <div class="flex items-center gap-4">
-        <img src="/src/assets/images/terms.svg" alt="terms tegning" class="w-15 h-15 shrink-0">
-        <p class="text-sm">
-          Agree to our terms and conditions. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
-        </p>
+      <!-- Step 2 -->
+      <div class="flex flex-col gap-2 ">
+        <h3 class="font-semibold">2. FILL OUT THE FORM</h3>
+        <div class="flex items-center gap-4">
+          <img src="/src/assets/images/upload.svg" alt="upload tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30">
+          <p class="text-sm">
+            Upload your photo and credentials in the form.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- Step 4 -->
-    <div class="flex flex-col gap-2">
-      <h3 class="font-semibold">4. UP TO 5 SUBMISSIONS</h3>
-      <div class="flex items-center gap-4">
-        <img src="/src/assets/images/submissions.svg" alt="submissions tegning" class="w-15 h-15 shrink-0">
-        <p class="text-sm">
-          You can make up to 5 submissions – go through step 1-3 for each submission;-)
-        </p>
+      <!-- Step 3 -->
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold">3. AGREE TO OUR TERMS</h3>
+        <div class="flex items-center gap-4">
+          <img src="/src/assets/images/terms.svg" alt="terms tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30">
+          <p class="text-sm">
+            Agree to our terms and conditions. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold">4. UP TO 5 SUBMISSIONS</h3>
+        <div class="flex items-center gap-4">
+          <img src="/src/assets/images/submissions.svg" alt="submissions tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30">
+          <p class="text-sm">
+            You can make up to 5 submissions – go through step 1-3 for each submission;-)
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<section class="container mx-auto px-4 py-8 max-w-lg">
-  <h2 class="text-xl font-bold mb-6">Submit your instant:</h2>
 
-  <form id="instantForm" class="flex flex-col gap-6">
-    <!-- Full name -->
-    <div class="flex flex-col gap-2">
-      <label for="name" class="font-medium">Full name:</label>
-      <input type="text" id="name" name="name" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-    </div>
+  <!-- Kolonne 7–12: Formular -->
+  <div class="md:col-span-5 md:col-start-7">
+    <h2 class="text-xl font-bold mb-6">Submit your instant:</h2>
 
-    <!-- Email -->
-    <div class="flex flex-col gap-2">
-      <label for="email" class="font-medium">E-mail:</label>
-      <input type="email" id="email" name="email" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-    </div>
+    <form id="instantForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+      <!-- Venstre kolonne -->
+      <div class="flex flex-col gap-4">
+        <!-- Full name -->
+        <div class="flex flex-col gap-2">
+          <label for="name" class="font-medium">Full name:</label>
+          <input type="text" id="name" name="name" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
 
-    <!-- Title -->
-    <div class="flex flex-col gap-2">
-      <label for="title" class="font-medium">Submission title:</label>
-      <input type="text" id="title" name="title" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-    </div>
+        <!-- Email -->
+        <div class="flex flex-col gap-2">
+          <label for="email" class="font-medium">E-mail:</label>
+          <input type="email" id="email" name="email" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
 
-    <!-- Upload -->
-    <div class="flex flex-col gap-2">
-      <label class="font-medium">Photo upload:</label>
-      <div class="border-2 border-dashed rounded flex flex-col items-center justify-center p-8 text-center text-sm cursor-pointer hover:bg-gray-50">
-        <img src="/src/assets/images/upload.svg" alt="upload icon" class="w-8 h-8 mb-2">
-        <p>Drag and drop<br> a photo or <span class="text-blue-600 underline">browse</span></p>
+        <!-- Title -->
+        <div class="flex flex-col gap-2">
+          <label for="title" class="font-medium">Submission title:</label>
+          <input type="text" id="title" name="title" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
       </div>
-    </div>
 
-    <!-- Description -->
-    <div class="flex flex-col gap-2">
-      <label for="description" class="font-medium">Submission description/story:</label>
-      <textarea id="description" name="description" rows="3" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
-    </div>
+      <!-- Højre kolonne -->
+      <div class="flex flex-col gap-2">
+        <label class="font-medium">Photo upload:</label>
+        <div class="border-2 border-dashed rounded flex flex-col items-center justify-center p-8 text-center text-sm cursor-pointer hover:bg-gray-50 h-full">
+          <img src="/src/assets/images/upload.svg" alt="upload icon" class="w-8 h-8 mb-2">
+          <p>Drag and drop<br> a photo or <span class="text-blue-600 underline">browse</span></p>
+        </div>
+      </div>
 
-    <!-- Terms -->
-    <div class="flex flex-col gap-2">
-      <label class="font-medium">Terms & conditions:</label>
-      <div class="border rounded p-4 h-48 overflow-y-auto text-sm">
+      <!-- Description (span begge) -->
+      <div class="md:col-span-2 flex flex-col gap-2">
+        <label for="description" class="font-medium">Submission description/story:</label>
+        <textarea id="description" name="description" rows="3" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+      </div>
+
+      <!-- Terms (span begge) -->
+      <div class="md:col-span-2 flex flex-col gap-2">
+        <label class="font-medium">Terms & conditions:</label>
+        <div class="border rounded p-4 h-48 overflow-y-auto text-sm">
         <p><strong>By participating in the contest, you accept the following terms and conditions</strong></p>
         <br>
           <p><strong>Participation</strong></p>
@@ -118,55 +133,61 @@ import MainLayout from "../layouts/MainLayout.astro";
          <br>
           <p><strong>Announcement of Winners</strong></p>
         <p>The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for promotional purposes.    </p>
+       </div>
       </div>
+
+      <!-- Checkbox (span begge) -->
+      <div class="md:col-span-2 flex items-center gap-2">
+        <input type="checkbox" id="agree" name="agree" class="w-4 h-4">
+        <label for="agree" class="text-sm">I have read and agree to the terms and conditions</label>
+      </div>
+
+      <!-- Submit (span begge) -->
+      <div class="md:col-span-2">
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">Submit</button>
+      </div>
+    </form>
+
+    <!-- Toast -->
+    <div id="toast"
+         class="hidden fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded shadow-lg max-w-sm text-sm opacity-0 transform translate-y-4 transition-all duration-500 ease-in-out">
+      <p class="font-semibold">You’re an instant champ! Thanks for the contribution:-)</p>
+      <p class="mt-2">The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.</p>
+      <p class="mt-2">If you’re one of the lucky winners or nominees, we will contact you by e-mail. Good luck!</p>
+      <p class="mt-2 font-medium">NB! Want to make one more submission? Start the submission form over:-)</p>
     </div>
-
-    <!-- Checkbox -->
-    <div class="flex items-center gap-2">
-      <input type="checkbox" id="agree" name="agree" class="w-4 h-4">
-      <label for="agree" class="text-sm">I have read and agree to the terms and conditions</label>
-    </div>
-
-    <!-- Submit -->
-    <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">Submit</button>
-  </form>
-
-  <!-- Toast -->
-  <div id="toast"
-       class="hidden fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded shadow-lg max-w-sm text-sm opacity-0 transform translate-y-4 transition-all duration-500 ease-in-out">
-    <p class="font-semibold">You’re an instant champ! Thanks for the contribution:-)</p>
-    <p class="mt-2">The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.</p>
-    <p class="mt-2">If you’re one of the lucky winners or nominees, we will contact you by e-mail. Good luck!</p>
-    <p class="mt-2 font-medium">NB! Want to make one more submission? Start the submission form over:-)</p>
   </div>
 </section>
 
+
+
 <script>
- const form = document.getElementById("instantForm") as HTMLFormElement;
+  const form = document.getElementById('instantForm');
+  const toast = document.getElementById('toast');
 
-  const toast = document.getElementById("toast");
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    // Her kan du tilføje validering af formularfelter, hvis nødvendigt
 
-    // Reset form
+    // Vis toast-beskeden
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('opacity-100', 'translate-y-0');
+      toast.classList.remove('opacity-0', 'translate-y-4');
+    }, 100); // Lille forsinkelse for at sikre, at klasserne anvendes korrekt
+
+    // Skjul toast-beskeden efter 5 sekunder
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 500); // Vent på overgangens varighed før skjulning
+    }, 5000);
+
+    // Nulstil formularen
     form.reset();
-
-    // Show toast
-    toast.classList.remove("hidden");
-    setTimeout(() => {
-      toast.classList.remove("opacity-0", "translate-y-4");
-      toast.classList.add("opacity-100", "translate-y-0");
-    }, 50);
-
-    // Hide toast after 6s
-    setTimeout(() => {
-      toast.classList.remove("opacity-100", "translate-y-0");
-      toast.classList.add("opacity-0", "translate-y-4");
-      setTimeout(() => toast.classList.add("hidden"), 500);
-    }, 6000);
   });
 </script>
-
-
-</MainLayout>
+  </MainLayout>
