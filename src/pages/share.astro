@@ -162,7 +162,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 
 <script>
-  const form = document.getElementById('instantForm');
+  const form = document.getElementById("instantForm") as HTMLFormElement;
+
   const toast = document.getElementById('toast');
 
   form.addEventListener('submit', function(event) {
