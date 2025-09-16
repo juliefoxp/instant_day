@@ -2,7 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
-<header x-data="{ showmenu: false }" class="bg-white border-b-2 border-black" >
+<header x-data="{ showmenu: false }" class="bg-white  border-black" >
 <!-- DESKTOP VERTICAL HEADER -->
 <aside class="hidden lg:flex fixed top-0 left-0 h-screen w-28 border-r-2 border-black bg-white flex-col items-center justify-between py-12">
   <!-- Logo -->
