@@ -2,32 +2,141 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 <MainLayout>
-    <h1>Winners & nominess</h1>
-    <p>Instant Day was quite a success with more than 500 contributions. So it was difficult to find a winner. After a couple of long but exciting days, the judges agreed on the winner and the 6 nominees.</p>
-    <section>
-        <h2>The winner</h2>
-        <p>05 - Nørrebro</p>
-        <p>Submitter: Julie</p>
-        <p>Description/Story: In the vibrant heart of Nørrebro, where the streets buzz with life and culture, Toke finds an unexpected companion—a goat with an attitude as bold as the neighborhood itself. Against the backdrop of colorful murals and bustling cafés, the unlikely duo stands side by side, embodying the spirit of this eclectic part of Copenhagen. Tokes calm curiosity meets the goat’s playful stare, a moment frozen in time that tells a story of connection in the citys urban jungle.</p>
-        <img src="winner.webp" alt="winner billede" class="w-40 h-65 object-cover border">
-    </section>
-    <section>
-        <h2>Best of 2025 nominess</h2>
-        <img src="nominees_1.webp" alt="billede af nominess 1" class="w-40 h-65 object-cover border">
-        <p>01 - Copenhagen cafe</p>
-        <p>Submitter: Julie</p>
-        <p>Description/story: A casual snap from this cozy café—a welcoming spot full of warmth and creativity. Natural light fills the space, highlighting elegant marble tables and comfortable wicker chairs. The smell of fresh coffee and pastries invites both locals and visitors to relax and enjoy the calm atmosphere. It’s the perfect place to take a break and soak in the unique vibe of the neighborhood. Taken with an Instax Mini.</p>
-        <img src="nominees_2.webp" alt="billede af nominess 2" class="w-40 h-65 object-cover border">
-        <p>02 - Nørrebro</p>
-        <p>Submitter: Toke</p>
-        <p>This vibrant building in the heart of Nørrebro stands out with its bold blue and orange colors, reflecting the neighborhood’s lively and creative spirit. The striking contrast catches the eye and adds a splash of energy to the street, embodying the colorful diversity that makes Nørrebro so unique.Taken with a Instax Mini</p>
-        <img src="nominees_3.webp" alt="billede af nominess 3" class="w-40 h-65 object-cover border">
-        <p>03 - A good friend</p>
-        <p>Submitter: Julie</p>
-        <p>A moment of true friendship captured in one frame. Two good friends, arm in arm, with smiles that say more than words ever could. No posing, no filters—just connection, comfort, and the kind of bond that doesn’t need explaining.Taken with an Instax Mini</p>
-        <img src="nominees_4.webp" alt="billede af nominess 4" class="w-40 h-65 object-cover border">
-        <p>04 - Nørrebro</p>
-        <p>Submitter: Toke</p>
-        <p>Standing proud in front of a rainbow-colored gate—a symbol of love, diversity, and being exactly who you are. The colors speak louder than words, turning an ordinary spot into a celebration of identity and inclusion. A little burst of joy in the middle of the city. Taken with a Instax Mini</p>
-    </section>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-4xl font-bold mb-4">Winners & Nominees</h1>
+  <p class="mb-6">
+    Instant Day was quite a success with more than 500 contributions. So it was difficult to find a winner. After a couple of long but exciting days, the judges agreed on the winner and the 6 nominees.
+  </p>
+  <section class="mt-20 flex items-start gap-10">
+    <div class="flex-1">
+      <h2 class="text-2xl font-semibold mb-2">The winner</h2>
+      <p class="font-semibold mb-1">05 - Nørrebro</p>
+      <p class="mb-1">Submitter: Julie</p>
+      <p class="mb-4">
+        Description/Story: In the vibrant heart of Nørrebro, where the streets buzz with life and culture, Toke finds an unexpected companion—a goat with an attitude as bold as the neighborhood itself. Against the backdrop of colorful murals and bustling cafés, the unlikely duo stands side by side, embodying the spirit of this eclectic part of Copenhagen. Tokes calm curiosity meets the goat’s playful stare...
+      </p>
+    </div>
+    <img src="winner.webp" alt="winner billede" class="w-40 border rounded shadow" />
+  </section>
+</div>
+
+     
+  <section class="bg-white py-10 pl-[120px]">
+  <h2 class="text-3xl font-bold text-center mb-8">Best of 2025 Nominees</h2>
+
+  <div class="overflow-hidden">
+    <div
+      class="flex animate-scroll-left"
+      style="width: calc((16rem + 2rem) * 14);" >
+      <div class="flex space-x-8">
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_1.webp" alt="billede af nominess 1" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">01 - Copenhagen cafe</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A casual snap from this cozy café —a welcoming spot full of warmth and creativity. (Taken with an Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_2.webp" alt="billede af nominess 2" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">02 - Copenhagens Jewel</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">This vibrant building in Nørrebro stands out with bold blue and orange colors (Taken with an Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_3.webp" alt="billede af nominess 3" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">03 - A good friend</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A moment of true friendship captured in one frame (Taken with an Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_4.webp" alt="billede af nominess 4" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">04 - Colors of Hope</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">In front of a rainbow-colored gate —a symbol of love and inclusion (Taken with an Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_5.webp" alt="billede af nominess 5" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">05 - Natures Embrace</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A charming building embraced by green bushes in central Copenhagen (Taken with an Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_6.webp" alt="billede af nominess 6" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">06 - Sunlit in Copenhagen</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">In Copenhagen, the morning sun kissed the old brick building, turning its walls golden. (Taken with a Instax Mini)</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_7.webp" alt="billede af nominess 7" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">07 - The Living Green</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">Green trees of Copenhagen in late summer - light breeze, soft rustle of leaves. (Taken with an Instax Mini)</p>
+        </div>
+      </div>
+
+      <div class="flex space-x-8">
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_1.webp" alt="billede af nominess 1" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">01 - Copenhagen cafe</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A casual snap from this cozy café—a welcoming spot full of warmth and creativity... Taken with an Instax Mini.</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_2.webp" alt="billede af nominess 2" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">02 - Nørrebro</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">This vibrant building in Nørrebro stands out with bold blue and orange colors... Taken with an Instax Mini.</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_3.webp" alt="billede af nominess 3" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">03 - A good friend</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A moment of true friendship captured in one frame... Taken with an Instax Mini.</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_4.webp" alt="billede af nominess 4" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">04 - Nørrebro</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">In front of a rainbow-colored gate—a symbol of love and inclusion... Taken with an Instax Mini.</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_5.webp" alt="billede af nominess 5" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">05 - Nørrebro</p>
+          <p class="text-sm">Submitter: Julie</p>
+          <p class="text-xs text-gray-700 mt-2">A charming building embraced by green bushes in central Copenhagen... Taken with an Instax Mini.</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_6.webp" alt="billede af nominess 6" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">06 - Nature</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">Green trees of Copenhagen in late summer... light breeze, soft rustle of leaves...</p>
+        </div>
+        <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow">
+          <img src="nominees_7.webp" alt="billede af nominess 7" class="w-full h-40 object-cover border rounded mb-2" />
+          <p class="font-semibold">07 - Nørrebro</p>
+          <p class="text-sm">Submitter: Toke</p>
+          <p class="text-xs text-gray-700 mt-2">The iconic blue building gleams under the sunlight... beacon of creativity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom CSS til animation -->
+  <style>
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-20%));
+      }
+    }
+
+    .animate-scroll-left {
+      animation: scroll-left 40s linear infinite;
+      /* 40s duration kan justeres efter ønske */
+    }
+  </style>
+</section>
+
+
 </MainLayout>
