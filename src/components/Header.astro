@@ -3,29 +3,48 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 <header x-data="{ showmenu: false }" class="bg-white border-b-2 border-black" >
-    <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
-        <div id="logo" class="">
-         <a href="#"> <img src="/public/logo.PNG" alt="logo" class="w-80"></a>
-           
-        </div>
-        <nav id="desktopmenu" class="hidden lg:block">
-            <ul class="flex flex-row gap-4">
-                <li class=""><a href="/" class={currentPath === "" ? "font-bold" : ""}>forside</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-                <li class=""><a href="/info/" class={currentPath === "lyt/" ? "font-bold" : ""}>info</a></li>
-                <li class=""><a href="/share/" class={currentPath === "live/" ? "font-bold" : ""}>share</a></li>
-                <li class=""><a href="/winners/" class={currentPath === "om/" ? "font-bold" : ""}>winners</a></li>
+<!-- DESKTOP VERTICAL HEADER -->
+<aside class="hidden lg:flex fixed top-0 left-0 h-screen w-28 border-r-2 border-black bg-white flex-col items-center justify-between py-12">
+  <!-- Logo -->
 
-            </ul>
-        </nav>
-        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
-    </div>
-    <nav id="mobilmenu" class="flex flex-col content-center" 
-    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="border-t-2 border-b-2 border-black">
-            <li class="text-center py-2"><a href="/" class={currentPath === "" ? "font-bold" : ""}>Forside</a></li>
-            <li class="text-center py-2"><a href="/lyt/" class={currentPath === "lyt/" ? "font-bold" : ""}>lyt</a></li>
-            <li class="text-center py-2"><a href="/live/" class={currentPath === "live/" ? "font-bold" : ""}>live</a></li>
-            <li class="text-center py-2"><a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}>om</a></li>
-        </ul>
-    </nav>
+
+  <!-- Vertical menu -->
+  <nav class="flex flex-col items-center gap-16">
+    <a href="/info/" class="transform -rotate-90 origin-center hover:font-bold">Info</a>
+    <a href="/share/" class="transform -rotate-90 origin-center hover:font-bold">Share</a>
+    <a href="/winners/" class="transform -rotate-90 origin-center hover:font-bold">Winners</a>
+  </nav>
+    <a href="/" class="block transform -rotate-90 origin-center">
+<!-- Styr bredden -->
+<img src="/public/logo.PNG" alt="logo" class="w-[300px] h-auto max-w-none translate-x-25">
+
+
+
+  </a>
+</aside>
+
+
+   <header x-data="{ showmenu: false }">
+  <!-- MOBILE HEADER -->
+  <div class="bg-white border-b-2 border-black flex lg:hidden justify-between items-center p-4">
+    <a href="#">
+      <img src="/public/logo.PNG" alt="logo" class="w-40">
+    </a>
+    <button id="burgermenu" x-on:click="showmenu = !showmenu">Menu</button>
+  </div>
+
+  <!-- Mobile menu dropdown -->
+  <nav id="mobilmenu" class="flex flex-col lg:hidden"
+    x-show="showmenu" 
+    x-transition 
+    x-on:click="showmenu = false" 
+    x-on:click.outside="showmenu = false">
+    <ul class="border-t-2 border-b-2 border-black">
+      <li class="text-center py-2"><a href="/">Forside</a></li>
+      <li class="text-center py-2"><a href="/info/">Info</a></li>
+      <li class="text-center py-2"><a href="/share/">Share</a></li>
+      <li class="text-center py-2"><a href="/winners/">Winners</a></li>
+    </ul>
+  </nav>
+
 </header>
