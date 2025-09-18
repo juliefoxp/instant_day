@@ -23,15 +23,43 @@ import Button from "../components/Button.astro";
 
  <!-- Intro -->
  <section class="space-y-16">
-   <h1 class="font-display text-5xl md:text-7xl pb-10 leading-tight">
-     20 days<br>42 minutes
+   <h1 class="font-display text-5xl md:text-7xl leading-tight">
+     Instant Day
    </h1>
+
+
+
+        <div class=" flex items-center justify-between gap-4 md:gap-8 md:mb-50">
+         
+          <div id="countdown" class="flex items-center gap-4 md:gap-6 font-H1 text-4xl md:text-5xl leading-none">
+            <div class="text-center">
+              <span id="days" class="font-display ">00</span>
+              <span class="block text-[10px] font-display md:text-sm font-light tracking-[0.2em]">DAYS</span>
+            </div>
+            <span class="font-display">:</span>
+            <div class="text-center">
+              <span class="font-display" id="hours">00</span>
+              <span class="block text-[10px] font-display md:text-sm font-light tracking-[0.2em]">HOURS</span>
+            </div>
+            <span class="font-display">:</span>
+            <div class="text-center">
+              <span id="minutes" class="font-display">00</span>
+              <span class="block font-display text-[10px] md:text-sm font-light tracking-[0.2em]">MINUTES</span>
+            </div>
+          </div>
+        </div>
+      
+
+
+
+
+
    <h3 class="font-sans text-xl md:text-2xl max-w-200">
      October 18 is Instant Day. A day all about celebrating instant photography.
      So get out your Polaroid, Instax or whatever instant photography camera you are using,
      and show us your instants.
    </h3>
-   <div class="text-3xl pt-4">&darr;</div>
+   <div class="text-3xl pt-4 md:mb-20">&darr;</div>
  </section>
 
 
@@ -94,21 +122,21 @@ Instant Photography is a testament to life: It all started back in the 1940’s 
 
 
  <!-- HØJRE KOLONNE (1/3): ét sticky galleri, der lever hele vejen -->
- <aside class="relative md:col-start-3 md:row-start-1">
+ <aside class="hidden md:block relative md:col-start-3 md:row-start-1">
 <div id="gallery-viewport" class="sticky top-6 h-[calc(110vh-5rem)] overflow-hidden">
 	<h1>Inspiration</h1>
 <!-- <h1>Inspiration</h1> -->
      <div class="space-y-6 will-change-transform" id="gallery">
   
  <!-- Ét galleri-item -->
-<div class="bg-secondary">
+<div class="bg-secondary border border-black">
  <!-- billedet går kant-til-kant -->
  <img class="w-full object-cover block" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
  <div class="p-4 space-y-2">
-   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="font-semibold">Copenhagen Cafe</p>
    <p class="text-sm">Submitter: Julie</p>
  
  </div>
@@ -118,39 +146,39 @@ Instant Photography is a testament to life: It all started back in the 1940’s 
 
 
  <!-- Næste galleri-item -->
-<div class="bg-secondary">
+<div class="bg-secondary border border-black">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover block" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/src/assets/images/galleri_2.png" alt="Inspiration 2">
 
 
  <!-- tekst med padding -->
  <div class="p-4 space-y-2">
-   <p class="font-semibold">05 - Nørrebro</p>
-   <p class="text-sm">Submitter: Julie</p>
+   <p class="font-semibold">Copenhagen Jewel</p>
+   <p class="text-sm">Submitter: Toke</p>
  </div>
 </div>
  <!-- Næste galleri-item -->
-<div class="bg-secondary">
+<div class="bg-secondary border border-black">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover block" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/nominees_3.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
  <div class="p-4 space-y-2">
-   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="font-semibold">A good friend</p>
    <p class="text-sm">Submitter: Julie</p>
   </div>
 </div>
 
-<div class="bg-secondary">
+<div class="bg-secondary border border-black">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover block" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/nominees_4.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
  <div class="p-4 space-y-2">
-   <p class="font-semibold">05 - Nørrebro</p>
-   <p class="text-sm">Submitter: Julie</p>
+   <p class="font-semibold">Colors of Hope</p>
+   <p class="text-sm">Submitter: Toke</p>
   </div>
 </div>
  <div id="gallery-spacer" style="height: calc(5vh - 1.5rem);"></div>
@@ -230,6 +258,39 @@ Instant Photography is a testament to life: It all started back in the 1940’s 
   const ro = new ResizeObserver(recalc);
   ro.observe(gallery);
 })();
+
+
+// Mål-dato: 18. oktober 2025 kl. 00:00
+  const targetDate = new Date("2025-10-18T00:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      // Hvis vi er forbi datoen
+      document.getElementById("days").textContent = "00";
+      document.getElementById("hours").textContent = "00";
+      document.getElementById("minutes").textContent = "00";
+      clearInterval(interval);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    // Formatér med to cifre (fx 07 i stedet for 7)
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+  }
+
+  // Opdater med det samme, og derefter hvert minut/sekund
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+
+
 </script>
 
 

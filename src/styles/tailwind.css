@@ -24,9 +24,9 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary: #ffffff;
+  --color-primary: #fffbf8;
 
-  --color-secondary: ##c7eac9;
+  --color-secondary: #c7eac9;
 
   /*Typografi */
   --font-display: "Daily slab", sans-serif;
@@ -42,7 +42,7 @@
 @layer utilities {
 }
 :root {
-  --color-primary: #ffffff;
+  --color-primary: #fffbf8;
   --color-secondary: #c7eac9;
 }
 
