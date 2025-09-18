@@ -76,41 +76,50 @@ import MainLayout from "../layouts/MainLayout.astro";
         <!-- Full name -->
         <div class="flex flex-col gap-2">
           <label for="name" class="font-medium">Full name:</label>
-          <input type="text" id="name" name="name" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+          <input type="text" id="name" name="name" class="border bg-secondary rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
         </div>
 
         <!-- Email -->
         <div class="flex flex-col gap-2">
           <label for="email" class="font-medium">E-mail:</label>
-          <input type="email" id="email" name="email" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+          <input type="email" id="email" name="email" class="border bg-secondary rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
         </div>
 
         <!-- Title -->
         <div class="flex flex-col gap-2">
           <label for="title" class="font-medium">Submission title:</label>
-          <input type="text" id="title" name="title" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
+          <input type="text" id="title" name="title" class="border bg-secondary rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black">
         </div>
       </div>
 
       <!-- Højre kolonne -->
-      <div class="flex flex-col gap-2">
-        <label class="font-medium">Photo upload:</label>
-        <div class="border-2 border-dashed rounded flex flex-col items-center justify-center p-8 text-center text-sm cursor-pointer hover:bg-gray-50 h-full">
-          <img src="/src/assets/images/upload.svg" alt="upload icon" class="w-8 h-8 mb-2">
-          <p>Drag and drop<br> a photo or <span class="text-blue-600 underline">browse</span></p>
-        </div>
-      </div>
+     <div class="flex flex-col gap-2">
+  <label class="font-medium">Photo upload:</label>
+  <div
+    class="group border-2 border-dashed rounded flex flex-col items-center justify-center p-8 text-center bg-secondary text-sm cursor-pointer h-full hover:bg-gray-100"
+  >
+    <img
+      src="/src/assets/images/upload.svg"
+      alt="upload icon"
+      class="w-8 h-8 mb-2 bg-secondary group-hover:bg-gray-100"
+    >
+    <p>
+      Drag and drop<br>
+      a photo or <span class="text-blue-600 underline">browse</span>
+    </p>
+  </div>
+</div>
 
       <!-- Description (span begge) -->
       <div class="md:col-span-2 flex flex-col gap-2">
         <label for="description" class="font-medium">Submission description/story:</label>
-        <textarea id="description" name="description" rows="3" class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+        <textarea id="description" name="description" rows="3" class="border bg-secondary rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
       </div>
 
       <!-- Terms (span begge) -->
       <div class="md:col-span-2 flex flex-col gap-2">
         <label class="font-medium">Terms & conditions:</label>
-        <div class="border rounded p-4 h-48 overflow-y-auto text-sm">
+        <div class="border rounded p-4 h-48 bg-secondary overflow-y-auto text-sm">
         <p><strong>By participating in the contest, you accept the following terms and conditions</strong></p>
         <br>
           <p><strong>Participation</strong></p>
@@ -141,8 +150,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       <!-- Checkbox (span begge) -->
       <div class="md:col-span-2 flex items-center gap-2">
-        <input type="checkbox" id="agree" name="agree" class="w-4 h-4">
-        <label for="agree" class="text-sm">I have read and agree to the terms and conditions</label>
+        <input type="checkbox" id="agree" name="agree" class="w-4 bg-secondary h-4">
+        <label for="agree" class="text-sm ">I have read and agree to the terms and conditions</label>
       </div>
 
       <!-- Submit (span begge) -->
