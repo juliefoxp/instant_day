@@ -1,29 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
-import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
-import { Image } from "astro:assets";
-import blast from "../assets/images/blast.jpg";
-import dans from "../assets/images/dans.jpg";
-import keys from "../assets/images/keys.jpg";
-import guitar from "../assets/images/guitar.jpg";
-import flerekeys from "../assets/images/flerekeys.jpg";
-import konc1 from "../assets/images/konc1.jpg";
-import konc2 from "../assets/images/konc2.jpg";
-import konc3 from "../assets/images/konc3.jpg";
-import konc4 from "../assets/images/konc4.jpg";
-import konc5 from "../assets/images/konc5.jpg";
-import konc6 from "../assets/images/konc6.jpg";
-import konc7 from "../assets/images/konc7.jpg";
-import konc8 from "../assets/images/konc8.jpg";
-import konc9 from "../assets/images/konc9.jpg";
-import konc10 from "../assets/images/konc10.jpg";
-import konc11 from "../assets/images/konc11.jpg";
-import konc12 from "../assets/images/konc12.jpg";
-import konc13 from "../assets/images/konc13.jpg";    
-import konc14 from "../assets/images/konc14.jpg";
-import konc15 from "../assets/images/konc15.jpg";
+import Button from "../components/Button.astro";
 ---
 <MainLayout title="Titel">
 
@@ -45,7 +22,7 @@ import konc15 from "../assets/images/konc15.jpg";
 
 
  <!-- Intro -->
- <section>
+ <section class="space-y-16">
    <h1 class="font-display text-5xl md:text-7xl pb-10 leading-tight">
      20 days<br>42 minutes
    </h1>
@@ -58,13 +35,15 @@ import konc15 from "../assets/images/konc15.jpg";
  </section>
 
 
- <!-- 4 steps (original styling) -->
-<section>
-	<h2 class="font-display text-3xl mb-6">How to participate</h2>
+
+<section class="space-y-16">
+	<h2 class="font-display text-3xl mb-6">Why instant photography?</h2>
+	<p class="max-w-prose">
+Instant Photography is a testament to life: It all started back in the 1940’s with a 3 year old kid. She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography. Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70’s and 80’s, until the digital era almost killed the industry. The massive amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again. And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let’s celebrate life, and make memories:-)        </p>
 </section>
 
-
- <section>
+ <!-- 4 steps (original styling) -->
+ <section class="space-y-16 mb-16">
    <h2 class="font-display text-3xl mb-6">How to participate</h2>
    <div class="space-y-6">
      <div class="flex items-center gap-4">
@@ -100,47 +79,13 @@ import konc15 from "../assets/images/konc15.jpg";
        </p>
      </div>
    </div>
+
+<a href="/share/"><Button>Share your instants</Button></a>
+
  </section>
 
 
- <!-- 4 steps (samme igen) -->
- <section>
-   <h2 class="font-display text-3xl mb-6">How to participate</h2>
-   <div class="space-y-6">
-     <div class="flex items-start gap-4">
-       <img src="/one.png" alt="Step 1" class="w-14 h-14">
-       <p class="max-w-prose">
-         Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2–10 MB, in jpg/jpeg or webp format.
-       </p>
-     </div>
-
-
-     <div class="flex items-start gap-4">
-       <img src="/two.png" alt="Step 2" class="w-14 h-14">
-       <p class="max-w-prose">
-         Upload your photo and credentials on
-         <a href="/upload" class="underline">this page</a>.
-       </p>
-     </div>
-
-
-     <div class="flex items-start gap-4">
-       <img src="/three.png" alt="Step 3" class="w-14 h-14">
-       <p class="max-w-prose">
-         Agree to our terms and conditions
-         <a href="/share-your-instants#terms" class="underline">here</a>. Participants must be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
-       </p>
-     </div>
-
-
-     <div class="flex items-start gap-4">
-       <img src="/four.png" alt="Step 4" class="w-14 h-14">
-       <p class="max-w-prose">
-         You can make up to 5 submissions – go through step 1–3 for each submission ;-)
-       </p>
-     </div>
-   </div>
- </section>
+ 
 
 
 </div>
@@ -150,14 +95,15 @@ import konc15 from "../assets/images/konc15.jpg";
 
  <!-- HØJRE KOLONNE (1/3): ét sticky galleri, der lever hele vejen -->
  <aside class="relative md:col-start-3 md:row-start-1">
-<div id="gallery-viewport" class="sticky top-6 h-[calc(100vh-1.5rem)] overflow-hidden">
-<h1>Inspiration</h1>
+<div id="gallery-viewport" class="sticky top-6 h-[calc(110vh-5rem)] overflow-hidden">
+	<h1>Inspiration</h1>
+<!-- <h1>Inspiration</h1> -->
      <div class="space-y-6 will-change-transform" id="gallery">
   
  <!-- Ét galleri-item -->
 <div class="bg-secondary">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
@@ -174,7 +120,7 @@ import konc15 from "../assets/images/konc15.jpg";
  <!-- Næste galleri-item -->
 <div class="bg-secondary">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
@@ -186,7 +132,7 @@ import konc15 from "../assets/images/konc15.jpg";
  <!-- Næste galleri-item -->
 <div class="bg-secondary">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
@@ -195,9 +141,10 @@ import konc15 from "../assets/images/konc15.jpg";
    <p class="text-sm">Submitter: Julie</p>
   </div>
 </div>
+
 <div class="bg-secondary">
  <!-- billedet går kant-til-kant -->
- <img class="w-full object-cover" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
+ <img class="w-full object-cover block" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
 
 
  <!-- tekst med padding -->
@@ -206,6 +153,7 @@ import konc15 from "../assets/images/konc15.jpg";
    <p class="text-sm">Submitter: Julie</p>
   </div>
 </div>
+ <div id="gallery-spacer" style="height: calc(5vh - 1.5rem);"></div>
 </div>
    </div>
  </aside>
@@ -217,78 +165,70 @@ import konc15 from "../assets/images/konc15.jpg";
  <!-- “Omvendt” parallax: galleriet bevæger sig opad mens man scroller ned -->
 <script>
 (() => {
- const viewport = document.getElementById('gallery-viewport');
- const gallery  = document.getElementById('gallery');
+  const viewport = document.getElementById('gallery-viewport');
+  const gallery  = document.getElementById('gallery');
+  let startY = 0;
+  let maxTranslate = 0;
+  let endScrollY = 0;
+  let ticking = false;
+  const bottomMargin = 80; // lidt mere "breathing room"
 
+  function docHeight() {
+    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+  }
+  function vpHeight() {
+    return window.innerHeight || document.documentElement.clientHeight;
+  }
 
- let startY = 0;              // dokument-Y hvor sticky begynder
- let maxTranslate = 0;        // hvor meget galleriet max kan flyttes op
- let endScrollY = 0;          // dokument-Y hvor vi vil ramme maxTranslate
- let ticking = false;
+  function recalc() {
+    const rect = viewport.getBoundingClientRect();
+    startY = window.scrollY + rect.top;
 
+    // inkluderer spacer -> gør det muligt at translater helt til bunden
+    maxTranslate = Math.max(0, gallery.scrollHeight - viewport.clientHeight);
 
- function docHeight() {
-   return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
- }
- function vpHeight() {
-   return window.innerHeight || document.documentElement.clientHeight;
- }
+    // sørg for endScrollY ikke er mindre end startY
+    endScrollY = Math.max(startY, docHeight() - vpHeight() - bottomMargin);
 
+    apply();
+  }
 
- function recalc() {
-   const rect = viewport.getBoundingClientRect();
-   startY = window.scrollY + rect.top;
+  function apply() {
+    const y = window.scrollY;
+    const span = Math.max(1, endScrollY - startY);
+    const progress = Math.min(1, Math.max(0, (y - startY) / span));
+    const translate = -maxTranslate * progress;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    gallery.style.transform = prefersReduced ? 'none' : `translateY(${translate}px)`;
+  }
 
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => { apply(); ticking = false; });
+      ticking = true;
+    }
+  }
 
-   // hvor langt kan vi fysisk flytte galleriet uden at “løbe tør” for indhold
-   maxTranslate = Math.max(0, gallery.scrollHeight - viewport.clientHeight);
+  // INIT
+  recalc();
 
+  // events
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', recalc);
+  window.addEventListener('orientationchange', recalc);
+  window.addEventListener('load', () => { recalc(); setTimeout(recalc, 200); });
 
-   // vi vil nå maxTranslate når vi er tæt på sidens bund.
-   // endScrollY ≈ det punkt hvor nederste del af venstre indhold er scrollet forbi.
-   const bottomMargin = 0; // justér hvis du har en footer du vil “respektere”
-   endScrollY = docHeight() - vpHeight() - bottomMargin;
+  // hvis billeder loader senere, genberegn når de er færdige
+  gallery.querySelectorAll('img').forEach(img => {
+    if (!img.complete) {
+      img.addEventListener('load', recalc);
+      img.addEventListener('error', () => setTimeout(recalc, 200));
+    }
+  });
 
-
-   apply(); // opdatér straks
- }
-
-
- function apply() {
-   // hvor er vi i forhold til sticky-start? (0..1 over hele siden)
-   const y = window.scrollY;
-   const span = Math.max(1, endScrollY - startY); // undgå /0
-   const progress = Math.min(1, Math.max(0, (y - startY) / span));
-
-
-   // interpolér til translate
-   const translate = -maxTranslate * progress;
-
-
-   // respects prefers-reduced-motion
-   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-   gallery.style.transform = prefersReduced ? 'none' : `translateY(${translate}px)`;
- }
-
-
- function onScroll() {
-   if (!ticking) {
-     requestAnimationFrame(() => { apply(); ticking = false; });
-     ticking = true;
-   }
- }
-
-
- // init + reflow ved resize/orientation/billed-load
- recalc();
- window.addEventListener('scroll', onScroll, { passive: true });
- window.addEventListener('resize', recalc);
- window.addEventListener('orientationchange', recalc);
-
-
- // hvis billeder loader senere, så vokser gallery.scrollHeight → recalc
- const ro = new ResizeObserver(recalc);
- ro.observe(gallery);
+  // også observer hvis indholdets størrelse ændrer sig
+  const ro = new ResizeObserver(recalc);
+  ro.observe(gallery);
 })();
 </script>
 
