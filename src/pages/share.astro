@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 <MainLayout>
 <section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -156,7 +157,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       <!-- Submit (span begge) -->
       <div class="md:col-span-2">
-        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">Submit</button>
+        
+        <Button type="submit" variant="primary" size="medium" >Submit</Button>
       </div>
     </form>
 
