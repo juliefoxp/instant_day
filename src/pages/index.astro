@@ -11,7 +11,7 @@ import guitar from "../assets/images/guitar.jpg";
 import flerekeys from "../assets/images/flerekeys.jpg";
 import konc1 from "../assets/images/konc1.jpg";
 import konc2 from "../assets/images/konc2.jpg";
-import konc3 from "../assets/images/konc3.jpg";	
+import konc3 from "../assets/images/konc3.jpg";
 import konc4 from "../assets/images/konc4.jpg";
 import konc5 from "../assets/images/konc5.jpg";
 import konc6 from "../assets/images/konc6.jpg";
@@ -20,85 +20,280 @@ import konc8 from "../assets/images/konc8.jpg";
 import konc9 from "../assets/images/konc9.jpg";
 import konc10 from "../assets/images/konc10.jpg";
 import konc11 from "../assets/images/konc11.jpg";
-import konc12 from "../assets/images/konc12.jpg";	
-import konc13 from "../assets/images/konc13.jpg";			
+import konc12 from "../assets/images/konc12.jpg";
+import konc13 from "../assets/images/konc13.jpg";    
 import konc14 from "../assets/images/konc14.jpg";
 import konc15 from "../assets/images/konc15.jpg";
 ---
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4 md:p-8 mt-10"">
-	
-		<section class="pb-40">
-		<h1 class="font-display text-7xl pb-20"> Nedtæller <br> el. overskrift</h1>
-		<h3 class="font-sans text-2xl max-w-200"> October 18 is Instant Day. 
-A day all about celebrating instant photography. 
-So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.</h3>
-		<div class="text-2xl pt-2">&darr;</div>
-</section>
 
-		<section>
-		<h2 class="font-display text-3xl"> Instant day 2025</h2>
-		<p class="font-sans max-w-200 pb-20"> October 18 is Instant Day. 
-A day all about celebrating instant photography. 
-So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.</p>
 
-<div class="space-y-6">
-  <div class="flex items-center gap-4">
-    <img src="/one.png" alt="Step 1" class="w-14 h-14">
-    <p class="max-w-prose">
-      Take a photo of your instant with your smartphone (or scan it for max. quality) - the file should be between 2 - 10 MB, in jpg/jpeg or webp format.
-    </p>
+
+
+ <!-- Tailwind via CDN -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+   /* lidt finjustering for pænere typografi */
+   .font-display { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+   .max-w-200 { max-width: 48rem; }
+ </style>
+
+
+<body class="bg-white text-black selection:bg-black selection:text-white">
+
+
+ <!-- GRID: venstre = indhold, højre = sticky galleri -->
+ <main class="mx-auto max-w-7xl px-4 md:px-8 mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+ <!-- VENSTRE kolonne: intro + 4 steps + 4 steps -->
+<div class="md:col-span-2 space-y-24">
+
+
+ <!-- Intro -->
+ <section>
+   <h1 class="font-display text-5xl md:text-7xl pb-10 leading-tight">
+     20 days<br>42 minutes
+   </h1>
+   <h3 class="font-sans text-xl md:text-2xl max-w-200">
+     October 18 is Instant Day. A day all about celebrating instant photography.
+     So get out your Polaroid, Instax or whatever instant photography camera you are using,
+     and show us your instants.
+   </h3>
+   <div class="text-3xl pt-4">&darr;</div>
+ </section>
+
+
+ <!-- 4 steps (original styling) -->
+ <section>
+   <h2 class="font-display text-3xl mb-6">How to participate</h2>
+   <div class="space-y-6">
+     <div class="flex items-start gap-4">
+       <img src="/one.png" alt="Step 1" class="w-14 h-14">
+       <p class="max-w-prose">
+         Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2–10 MB, in jpg/jpeg or webp format.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/two.png" alt="Step 2" class="w-14 h-14">
+       <p class="max-w-prose">
+         Upload your photo and credentials on
+         <a href="/upload" class="underline">this page</a>.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/three.png" alt="Step 3" class="w-14 h-14">
+       <p class="max-w-prose">
+         Agree to our terms and conditions
+         <a href="/share-your-instants#terms" class="underline">here</a>. Participants must be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/four.png" alt="Step 4" class="w-14 h-14">
+       <p class="max-w-prose">
+         You can make up to 5 submissions – go through step 1–3 for each submission ;-)
+       </p>
+     </div>
+   </div>
+ </section>
+
+
+ <!-- 4 steps (samme igen) -->
+ <section>
+   <h2 class="font-display text-3xl mb-6">How to participate</h2>
+   <div class="space-y-6">
+     <div class="flex items-start gap-4">
+       <img src="/one.png" alt="Step 1" class="w-14 h-14">
+       <p class="max-w-prose">
+         Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2–10 MB, in jpg/jpeg or webp format.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/two.png" alt="Step 2" class="w-14 h-14">
+       <p class="max-w-prose">
+         Upload your photo and credentials on
+         <a href="/upload" class="underline">this page</a>.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/three.png" alt="Step 3" class="w-14 h-14">
+       <p class="max-w-prose">
+         Agree to our terms and conditions
+         <a href="/share-your-instants#terms" class="underline">here</a>. Participants must be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
+       </p>
+     </div>
+
+
+     <div class="flex items-start gap-4">
+       <img src="/four.png" alt="Step 4" class="w-14 h-14">
+       <p class="max-w-prose">
+         You can make up to 5 submissions – go through step 1–3 for each submission ;-)
+       </p>
+     </div>
+   </div>
+ </section>
+
+
+</div>
+
+
+
+
+ <!-- HØJRE KOLONNE (1/3): ét sticky galleri, der lever hele vejen -->
+ <aside class="relative md:col-start-3 md:row-start-1">
+<div id="gallery-viewport" class="sticky top-6 h-[calc(100vh-1.5rem)] overflow-hidden">
+<h1>Inspiration</h1>
+     <div class="space-y-6 will-change-transform" id="gallery">
+  
+ <!-- Ét galleri-item -->
+<div class="bg-gray-100">
+ <!-- billedet går kant-til-kant -->
+ <img class="w-full object-cover" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
+
+
+ <!-- tekst med padding -->
+ <div class="p-4 space-y-2">
+   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="text-sm">Submitter: Julie</p>
+ 
+ </div>
+</div>
+
+
+
+
+ <!-- Næste galleri-item -->
+<div class="bg-gray-100">
+ <!-- billedet går kant-til-kant -->
+ <img class="w-full object-cover" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
+
+
+ <!-- tekst med padding -->
+ <div class="p-4 space-y-2">
+   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="text-sm">Submitter: Julie</p>
+ </div>
+</div>
+ <!-- Næste galleri-item -->
+<div class="bg-gray-100">
+ <!-- billedet går kant-til-kant -->
+ <img class="w-full object-cover" src="/src/assets/images/galleri_1.png" alt="Inspiration 1">
+
+
+ <!-- tekst med padding -->
+ <div class="p-4 space-y-2">
+   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="text-sm">Submitter: Julie</p>
   </div>
+</div>
+<div class="bg-gray-100">
+ <!-- billedet går kant-til-kant -->
+ <img class="w-full object-cover" src="/src/assets/images/galleri_2.png" alt="Inspiration 1">
 
-  <div class="flex items-center gap-4">
-    <img src="/two.png" alt="Step 2" class="w-14 h-14">
-    <p class="max-w-prose">
-      Upload your photo and credentials on 
-      <a href="/upload" class="text-blue-600 underline">this page</a>.
-    </p>
+
+ <!-- tekst med padding -->
+ <div class="p-4 space-y-2">
+   <p class="font-semibold">05 - Nørrebro</p>
+   <p class="text-sm">Submitter: Julie</p>
   </div>
+</div>
+</div>
+   </div>
+ </aside>
+</main>
 
-  <div class="flex items-start gap-4">
-    <img src="/three.png" alt="Step 3" class="w-14 h-14">
-    <p class="max-w-prose">
-      Agree to our terms and conditions 
-      <a href="/share-your-instants#terms" class="text-blue-600 underline">here</a>. 
-      The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
-    </p>
-  </div>
 
-  <div class="flex items-center gap-4">
-    <img src="/four.png" alt="Step 4" class="w-14 h-14">
-    <p class="max-w-prose">
-      You can make up to 5 submissions - go through step 1-3 for each submission ;-)
-    </p>
-  </div>
 
-	
-		</section>
-					
-		</section>
 
-	
+ <!-- “Omvendt” parallax: galleriet bevæger sig opad mens man scroller ned -->
+<script>
+(() => {
+ const viewport = document.getElementById('gallery-viewport');
+ const gallery  = document.getElementById('gallery');
 
-		<section class="container mx-auto p-4 mt-20">
-			<div class="md:columns-3">
-				<Image src={konc1} alt="Konc1" class="w-full h-auto mb-4" />
-				<Image src={konc2} alt="Konc2" class="w-full h-auto mb-4" />
-				<Image src={konc3} alt="Konc3" class="w-full h-auto mb-4" />
-				<Image src={konc4} alt="Konc4" class="w-full h-auto mb-4" />		
-				<Image src={konc5} alt="Konc5" class="w-full h-auto mb-4" />
-				<Image src={konc6} alt="Konc6" class="w-full h-auto mb-4" />
-				<Image src={konc7} alt="Konc7" class="w-full h-auto mb-4" />
-				<Image src={konc8} alt="Konc8" class="w-full h-auto mb-4" />
-				<Image src={konc9} alt="Konc9" class="w-full h-auto mb-4" />
-				<Image src={konc10} alt="Konc10" class="w-full h-auto mb-4" />
-				<Image src={konc11} alt="Konc11" class="w-full h-auto mb-4" />
-				<Image src={konc12} alt="Konc12" class="w-full h-auto mb-4" />
-				<Image src={konc13} alt="Konc13" class="w-full h-auto mb-4" />
-				<Image src={konc14} alt="Konc14" class="w-full h-auto mb-4" />
-				<Image src={konc15} alt="Konc15" class="w-full h-auto mb-4" />
-			</div>
-		</section>
-	</main>
+
+ let startY = 0;              // dokument-Y hvor sticky begynder
+ let maxTranslate = 0;        // hvor meget galleriet max kan flyttes op
+ let endScrollY = 0;          // dokument-Y hvor vi vil ramme maxTranslate
+ let ticking = false;
+
+
+ function docHeight() {
+   return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+ }
+ function vpHeight() {
+   return window.innerHeight || document.documentElement.clientHeight;
+ }
+
+
+ function recalc() {
+   const rect = viewport.getBoundingClientRect();
+   startY = window.scrollY + rect.top;
+
+
+   // hvor langt kan vi fysisk flytte galleriet uden at “løbe tør” for indhold
+   maxTranslate = Math.max(0, gallery.scrollHeight - viewport.clientHeight);
+
+
+   // vi vil nå maxTranslate når vi er tæt på sidens bund.
+   // endScrollY ≈ det punkt hvor nederste del af venstre indhold er scrollet forbi.
+   const bottomMargin = 0; // justér hvis du har en footer du vil “respektere”
+   endScrollY = docHeight() - vpHeight() - bottomMargin;
+
+
+   apply(); // opdatér straks
+ }
+
+
+ function apply() {
+   // hvor er vi i forhold til sticky-start? (0..1 over hele siden)
+   const y = window.scrollY;
+   const span = Math.max(1, endScrollY - startY); // undgå /0
+   const progress = Math.min(1, Math.max(0, (y - startY) / span));
+
+
+   // interpolér til translate
+   const translate = -maxTranslate * progress;
+
+
+   // respects prefers-reduced-motion
+   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   gallery.style.transform = prefersReduced ? 'none' : `translateY(${translate}px)`;
+ }
+
+
+ function onScroll() {
+   if (!ticking) {
+     requestAnimationFrame(() => { apply(); ticking = false; });
+     ticking = true;
+   }
+ }
+
+
+ // init + reflow ved resize/orientation/billed-load
+ recalc();
+ window.addEventListener('scroll', onScroll, { passive: true });
+ window.addEventListener('resize', recalc);
+ window.addEventListener('orientationchange', recalc);
+
+
+ // hvis billeder loader senere, så vokser gallery.scrollHeight → recalc
+ const ro = new ResizeObserver(recalc);
+ ro.observe(gallery);
+})();
+</script>
+
+
+</body>
+</html>
+
+
 </MainLayout>
