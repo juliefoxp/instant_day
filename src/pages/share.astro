@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 ---
 <MainLayout>
-<section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+<section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-12 gap-20">
     
 
 
@@ -17,15 +17,16 @@ import Button from "../components/Button.astro";
 
   <!-- Kolonne 2–6: Steps -->
   <div class="md:col-span-5">
-    <h1 class="text-2xl font-bold mb-2">Share your instants</h1>
-    <h2 class="text-base mb-8">Ready to share your instants? How to participate</h2>
+    <h1 class="text-6xl font-display mb-2">Share your instants</h1>
+    <h2 class="font-sans text-xl mb-30">Ready to share your instants? How to participate</h2>
 
-    <div class="flex flex-col gap-8">
+    
+    <div class="flex flex-col gap-8 ">
       <!-- Step 1 -->
-      <div class="flex flex-col gap-2">
-        <h3 class="font-semibold">1. TAKE A PHOTO</h3>
+      <div class="flex flex-col gap-2 ">
+        <h3 class="font-display text-3xl ">1. Take a photo</h3>
         <div class="flex items-center gap-4">
-          <img src="/src/assets/images/camera.svg" alt="camera tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
+          <img src="/src/assets/images/blitz.png" alt="camera tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
           <p class="text-sm">
             Take a photo of your instant with your smartphone (or scan it for max. quality) – the file should be between 2 - 10 MB, in jpg/jpeg or webp format.
           </p>
@@ -34,9 +35,9 @@ import Button from "../components/Button.astro";
 
       <!-- Step 2 -->
       <div class="flex flex-col gap-2 ">
-        <h3 class="font-semibold">2. FILL OUT THE FORM</h3>
+        <h3 class="text-3xl font-display">2. Fill out the form</h3>
         <div class="flex items-center gap-4">
-          <img src="/src/assets/images/upload.svg" alt="upload tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
+          <img src="/src/assets/images/cloud.png" alt="upload tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
           <p class="text-sm">
             Upload your photo and credentials in the form.
           </p>
@@ -45,9 +46,9 @@ import Button from "../components/Button.astro";
 
       <!-- Step 3 -->
       <div class="flex flex-col gap-2">
-        <h3 class="font-semibold">3. AGREE TO OUR TERMS</h3>
+        <h3 class="text-3xl font-display">3. Agree to our terms</h3>
         <div class="flex items-center gap-4">
-          <img src="/src/assets/images/terms.svg" alt="terms tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
+          <img src="/src/assets/images/form.png" alt="terms tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
           <p class="text-sm">
             Agree to our terms and conditions. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
           </p>
@@ -55,10 +56,10 @@ import Button from "../components/Button.astro";
       </div>
 
       <!-- Step 4 -->
-      <div class="flex flex-col gap-2">
-        <h3 class="font-semibold">4. UP TO 5 SUBMISSIONS</h3>
+      <div class="flex flex-col gap-2 md:mb-40">
+        <h3 class="text-3xl font-display">4. Up to 5 submissions</h3>
         <div class="flex items-center gap-4">
-          <img src="/src/assets/images/submissions.svg" alt="submissions tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
+          <img src="/src/assets/images/submissions.png" alt="submissions tegning" class="w-14 h-14 shrink-0 md:w-30 md:h-30 animate-[wiggle_2s_ease-in-out_infinite]">
           <p class="text-sm">
             You can make up to 5 submissions – go through step 1-3 for each submission;-)
           </p>
@@ -69,7 +70,7 @@ import Button from "../components/Button.astro";
 
   <!-- Kolonne 7–12: Formular -->
   <div class="md:col-span-5 md:col-start-7">
-    <h2 class="text-xl font-bold mb-6">Submit your instant:</h2>
+    <h2 class="text-3xl font-display md:mb-20">Submit your instant:</h2>
 
     <form id="instantForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
       <!-- Venstre kolonne -->
