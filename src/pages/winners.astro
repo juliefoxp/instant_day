@@ -22,14 +22,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 </div>
 
      
-  <section class="bg-[#C7EAC9] pb-10 py-10 pl-[120px]">
+  <section class="bg-[#C7EAC9] pb-10 py-10 lg:pl-[120px]">
   <h2 class="text-3xl font-display  text-center mb-8">Best of 2025 Nominees</h2>
 
   <div class="overflow-hidden">
     <div
       class="flex animate-scroll-left"
       style="width: calc((16rem + 2rem) * 14);" >
-      <div class="flex space-x-8">
+      <div class="flex space-x-8 mr-8">
         <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow border">
           <img src="/nominees_1.webp" alt="billede af nominess 1" class="w-full h-40 object-cover border rounded mb-2" />
           <p class="font-semibold">01 - Copenhagen cafe</p>
@@ -74,7 +74,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         </div>
       </div>
 
-      <div class="flex space-x-8">
+      <div class="flex space-x-8 mr-8">
         <div class="w-64 flex-shrink-0 bg-gray-50 p-4 rounded shadow border">
           <img src="/nominees_1.webp" alt="billede af nominess 1" class="w-full h-40 object-cover border rounded mb-2" />
           <p class="font-semibold">01 - Copenhagen cafe</p>
@@ -123,19 +123,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <!-- Custom CSS til animation -->
   <style>
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-20%));
-      }
-    }
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* kun halvdelen, ikke hele */
+}
 
-    .animate-scroll-left {
-      animation: scroll-left 40s linear infinite;
-      /* 40s duration kan justeres efter ønske */
-    }
+.animate-scroll-left {
+  animation: scroll-left 50s linear infinite;
+}
   </style>
 </section>
 
